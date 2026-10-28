@@ -2,42 +2,31 @@
 
 ![Xanmod MAIN](https://github.com/Locietta/xanmod-kernel-WSL2/actions/workflows/MAIN.yml/badge.svg?branch=main)
 ![Xanmod LTS](https://github.com/Locietta/xanmod-kernel-WSL2/actions/workflows/LTS.yml/badge.svg?branch=main)
-![](https://img.shields.io/github/license/Locietta/xanmod-kernel-WSL2)
-![version](https://img.shields.io/github/v/release/Locietta/xanmod-kernel-WSL2)
+![](https://img.shields.io/github/license/wsl2-kernels/omarchy-kernel-debian-ubuntu-aarch64)
+![version](https://img.shields.io/github/v/release/wsl2-kernels/omarchy-kernel-debian-ubuntu-aarch64)
 
-An **unofficial** [XanMod](https://gitlab.com/xanmod/linux) kernel port for **Debian/Ubuntu aarch64**, featuring:
+An **unofficial** Omarchy kernel port for **Debian/Ubuntu aarch64**, featuring:
 
-- **Microsoft's dxgkrnl** patches for GPU support
+- **Omarchy's kernel** patches for GPU support
 - **Compiled with Clang + ThinLTO** for additional optimizations
 - **Automated builds** via GitHub Actions (always up-to-date)
-- **Multiple CPU-optimized variants** (x64v2, x64v3, Skylake, Zen3)
+- **Built For aarch64** architecture
 
 ## Usage
 
-### Install via Scoop (Recommended)
-
-[scoop](https://scoop.sh/) is a command-line installer on windows that makes installation and update easy. We provide scoop manifests for this kernel in the [Locietta/sniffer](https://github.com/Locietta/sniffer) repository.
+### Install via apt (Recommended)
 
 #### Installation
 
 ```bash
 # Add the repository
-scoop bucket add sniffer https://github.com/Locietta/sniffer
-
-# Install kernel (alias to x64v3 variant, works for most modern CPUs)
-scoop install xanmod-WSL2
-
-# Optional: Install addons (extra modules, headers, documentation)
-scoop install xanmod-WSL2-addons
+sudo apt install ./*.deb
 
 # Restart WSL2 to apply
-wsl --shutdown
+sudo reboot now
 ```
 
-**That's it!** Scoop automatically configures everything for you.
-
-<details>
-<summary>Expand all other builds</summary>
+**That's it!** the kernel is installed
 
 ```bash
 # other MAIN builds
